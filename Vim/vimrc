@@ -1,0 +1,38 @@
+" Base Setup
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+
+" NerdTree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
+" Git
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+" Mod
+Plug '~/my-prototype-plugin'
+language time en_US.utf-8
+let mapleader = " "
+set number
+set numberwidth=3
+set cpoptions+=n
+
+" EPITECH
+set t_Co=256
+Plug 'LeBarbu/vim-epitech'
+let g:epi_mode_auto = 1
+" Powerline
+let g:Powerline_symbols = "fancy"
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+filetype plugin indent on
+
+" End
+call plug#end()

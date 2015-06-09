@@ -1,0 +1,8 @@
+{
+	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+	"font_face": "Meslo",
+	"font_size": 12,
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"theme": "Brogrammer.sublime-theme"
+}
