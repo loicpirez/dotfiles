@@ -1,0 +1,26 @@
+[global_config]
+  enabled_plugins = ,
+  inactive_color_offset = 1.0
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#2e3436:#f44336:#8bc34a:#cddc39:#0091ea:#9c27b0:#2196f3:#fff8e1:#555753:#e57373:#9ccc65:#d4e157:#0288d1:#ba68c8:#42a5f5:#eeeeec"
+    background_image = None
+    cursor_shape = underline
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#f5f5f5"
+    show_titlebar = False
+    font = Meslo LG S DZ for Powerline 14
+    background_color = "#1a1a1a"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
