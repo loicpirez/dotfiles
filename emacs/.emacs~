@@ -1,7 +1,6 @@
  ;; set values
 
 (set-language-environment "UTF-8")
-(delete-selection-mode 1)
 ;(set-foreground-color "white")
 ;(set-background-color "black")
 
