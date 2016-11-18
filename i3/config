@@ -36,7 +36,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec j4-dmenu-desktop
+bindsym $mod+d exec i3-dmenu-desktop --dmenu='dmenu -fn 'Cantarell-11' -sb "#6c71c4"'
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -165,13 +166,13 @@ bar {
 }
 
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 new_window normal 0 px
 hide_edge_borders both
 new_window none
 bindsym $mod+r mode "resize"
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- > /dev/null
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ > /dev/null
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- > /dev/null
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ > /dev/null
 bindsym XF86AudioMute exec --no-startup-id  /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 && cat /sys/class/backlight/intel_backlight/brightness > .brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 && cat /sys/class/backlight/intel_backlight/brightness > .brightness
