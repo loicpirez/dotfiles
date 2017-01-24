@@ -1,4 +1,9 @@
  ;; set values
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 
 (set-language-environment "UTF-8")
 (delete-selection-mode 1)

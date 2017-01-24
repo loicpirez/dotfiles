@@ -5,7 +5,7 @@
 ;; Login   <bah_d@epitech.net>
 ;;
 ;; Started on  Thu Sep  9 23:34:05 1993 djenaba bah
-;; Last update Wed Jan  4 16:32:40 2017 loic.pirez
+;; Last update Wed Jan  4 16:31:16 2017 loic.pirez
 ;;
 ;; Based on Comment routines by Isaac
 ;;
@@ -33,10 +33,8 @@
       domaine-name	"epitech.eu")
 (if (setq user-nickname (getenv "FULLNAME"))
     t
-  (setq user-nickname "Loïc Pirez")
+  (setq user-nickname "loic.pirez")
 )
-
-
 
 (setq write-file-hooks (cons 'update-std-header write-file-hooks))
 
@@ -143,7 +141,7 @@
     (insert-string (concat (std-get 'cc)
 			   header-login
 			   header-login-beg
-			   "loic.pirez"
+			   (getenv "LOGNAME")
 			   header-login-mid
 			   domaine-name
 			   header-login-end))
